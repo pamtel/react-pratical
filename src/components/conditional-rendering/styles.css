@@ -1,0 +1,30 @@
+.container{
+    width: 70%;
+    background: purple;
+    margin-left: 5rem;
+    padding: 20px;
+    border-radius: 5px;
+}
+.card{
+    background: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    line-height: 0px;
+}
+h3{
+    color: white;
+}
+button{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin-top: 10px;
+    outline-color: rgb(235, 160, 20);
+    border: none;
+    color: orange;
+}

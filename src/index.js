@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import App from './components/conditional-rendering/App';
+// import App from './components/lists/BirthdayApp';
+// import App from './App'
+// import App from './ContactApp'
+// import App from './GreetingApp'
+// import App from './components/Testing'
+// import App from './components/useState/App'
+ReactDOM.render(<App/>,
+    document.getElementById('root')
+    )

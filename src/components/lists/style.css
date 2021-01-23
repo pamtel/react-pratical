@@ -1,0 +1,35 @@
+.container{
+    margin-left: 30%;
+    width: 50%;
+    background: hotpink;
+    padding-left: 2em;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.content{
+    display: flex;
+    align-self: center;
+}
+img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+button{
+    background: white;
+    color: hotpink;
+    border: 2px solid white;
+    padding: 9px 6rem;
+    cursor: pointer;
+    margin-top: 7px;
+    outline: none;
+}
+.textContainer{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
