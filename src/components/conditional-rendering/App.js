@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Modal from './Modal'
 import Question from './Question'
+import Sample from './Sample'
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -17,7 +18,8 @@ function App() {
             <button onClick={changeButton}>Switch button</button>
             <button onClick={changeButton}>{isLoggedIn ? "Login":"sign up"}</button> */}
             {/* <Modal/> */}
-            <Question/>
+            {/* <Question/> */}
+            <Sample />
         </div>
     )
 }

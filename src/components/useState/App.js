@@ -1,9 +1,9 @@
 // import Counter from './Counter';
 import ArrayState from './ArrayState';
-import AsyncCounter from './AsyncCounter';
-import ObjectState from './ObjectState';
+import TodoList from './TodoList';
+
 function App() {
-    return <ArrayState/>
+    return <TodoList />
 }
 
 export default App;
