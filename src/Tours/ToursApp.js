@@ -41,7 +41,15 @@ function ToursApp() {
         })
         setTours(tourDelete);
     }
-    
+
+    if(tours.length === 0){
+        return(
+            <div>
+                <h2>No tours left</h2>
+                <button onClick={() => setTours(tours)}>Refresh</button>
+            </div>
+        )
+    }
     return (
         <div style={{maxWidth: 900, margin: "0 auto"}}>
             <h1>OUR TOURS</h1>
