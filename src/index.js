@@ -17,10 +17,13 @@ import './index.css';
 // import App from './Menu/MenuApp'
 // import App from './TimerApp/TimerApp'
 // import App from './useRef/App'
-import App from './useReducer/App'
+// import App from './useReducer/App'
 // import App from './CustomHooks/App'
 // import App from './useFetch/App'
 // import App from './ContextApi/UseContext'
+// import App from './PropTypes/App'
+// import App from './Routing/App'
+import App from './NinjaList/App'
 
 ReactDOM.render(<App/>,
     document.getElementById('root')

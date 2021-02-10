@@ -3,6 +3,7 @@
     export const HANDLE_DELETE = "HANDLE_DELETE"
     export const CLEAR_ITEMS = "CLEAR_ITEMS"
     export const ENTER_VALUE = "ENTER_VALUE"
+    export const HANDLE_EDIT = "HANDLE_EDIT"
 
 const Reducer = (state, action) => {
     console.log(action);
@@ -44,6 +45,13 @@ const Reducer = (state, action) => {
                     showModal: true,
                     modalText: "Please Enter Value",
                     modalColor: "bg-red-200"
+                }
+            case HANDLE_EDIT: 
+            const editProduct = state.AllItems.find((singleItem) => {
+                return singleItem.id === action.payload
+            })
+                return {
+                    ...state
                 }
             default:
                 return state;
