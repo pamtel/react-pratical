@@ -1,7 +1,12 @@
-import React from 'react'
+import { useContext } from 'react'
+import  useFetch from "../useFetch";
+import { useParams } from "react-router-dom";
+import { AppContext } from "../App";
 
-function singleNinja() {
-    const state = {};
+function SingleNinja() {
+    const [state, dispatch] = useContext(AppContext)
+
+    useFetch(`https://jsonplaceholder.typicode.com/users`,dispatch,"single");
     return (
         <div>
             <h2>My name is {state?.name}</h2>
@@ -11,4 +16,4 @@ function singleNinja() {
         </div>
     )
 }
-export default singleNinja
+export default SingleNinja

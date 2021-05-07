@@ -12,6 +12,15 @@ const initialState = {
     ninjas: [],
     isLoading: true,
     isError: false,
+    singleNinja: {
+        name:"",
+        address:{city:"", street:"",suite:"",zipcode:""},
+        company:{name:""},
+        email:"",
+        website:"",
+        username:"",
+        phone: "",
+    },
 }
 
 export const AppContext = createContext(null)
@@ -21,7 +30,7 @@ function App() {
     return (
         <BrowserRouter>
             <AppContext.Provider value={[state, dispatch]}>
-            <div className="px-3 py-2 md:px-11 text-lg text-gray-500 bg-gray-100">
+            <div className="px-3 py-2 md:px-11 text-lg text-gray-500 bg-gray-100 md:h-screen">
                 <Header/>
                 <Switch>
                     <Route exact path="/">

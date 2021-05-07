@@ -46,7 +46,7 @@ import {ADD_SINGLE_ITEM, CLEAR_ITEMS, CLOSE_MODAL, HANDLE_DELETE, ENTER_VALUE, H
     console.log({state});
     
     return (
-        <div className=" bg-gray-50 mt-16 pt-10 pb-8 ml-32 mr-32 rounded shadow-md md:pr-96 md:pl-96">
+        <div className=" bg-gray-50 text-center mt-16 pt-10 pb-8 ml-20 mr-20 rounded shadow-md">
             <fieldset className="text-center">
                 {state.showModal && <Modal modalText={state.modalText} closeModal={closeModal} modalColor={state.modalColor}/>}
                 <legend className="mb-5 font-bold text-xl">Grocery Store</legend>
@@ -66,13 +66,15 @@ import {ADD_SINGLE_ITEM, CLEAR_ITEMS, CLOSE_MODAL, HANDLE_DELETE, ENTER_VALUE, H
             <div className="mt-10 text-center mx-4">
                 <ul>
                     {state.AllItems.map((grocery) => (
-                        <li className="flex justify-between m-7"
+                        <li className="flex justify-between m-5 md:pl-28 pr-28"
                         key={grocery.id}>
                             <span>{grocery.singleItem}</span>
-                            <button className="bg-green-600 px-3 rounded-sm text-white ml-20" 
-                            onClick={() => handleEdit(grocery.id, grocery.singleItem)}>Edit</button>
-                            <button className="bg-red-600 px-3 rounded-sm text-white ml-5"
-                            onClick={() => handleDelete(grocery.id, grocery.singleItem)}>Delete</button>
+                            <div className="flex justify-between">
+                                <button className="bg-green-600 px-3 rounded-sm text-white ml-20" 
+                                onClick={() => handleEdit(grocery.id, grocery.singleItem)}>Edit</button>
+                                <button className="bg-red-600 px-3 rounded-sm text-white ml-5"
+                                onClick={() => handleDelete(grocery.id, grocery.singleItem)}>Delete</button>
+                                </div>
                         </li>
                     ))}
                     

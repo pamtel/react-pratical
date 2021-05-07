@@ -23,7 +23,14 @@ import './index.css';
 // import App from './ContextApi/UseContext'
 // import App from './PropTypes/App'
 // import App from './Routing/App'
-import App from './NinjaList/App'
+// import App from './NinjaList/App'
+// import App from './Reviews/App'
+// import App from './Animations/App'
+// import App from './formValidation/App'
+// import App from './ReactModal/TestModal'
+// import App from "./Redux/App";
+import App from "./Redux_1/App";
+
 
 ReactDOM.render(<App/>,
     document.getElementById('root')

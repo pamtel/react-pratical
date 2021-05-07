@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useContext} from 'react'
 import {AppContext} from '../App'
-import * as actions from '../actions'
 import Loading from '../component/Loading'
 import useFetch from '../useFetch'
 
@@ -9,6 +8,7 @@ import useFetch from '../useFetch'
 function NinjaList() {
     const [state, dispatch] = useContext(AppContext)
 
+    console.log(state);
     useFetch("https://jsonplaceholder.typicode.com/users", dispatch)
     if(state.isLoading) {
        return <Loading/>
@@ -22,8 +22,9 @@ function NinjaList() {
 }
 
 const Ninja = (props) => {
+    console.log(props);
     return (
-        <Link to="">
+        <Link to={`/ninjas/${props.id}`}>
             <article className="bg-white mb-5 p-3 border-l-8 border-white hover:border-blue-600 ">
                 <h3 className="font-bold text-xl mb-2">{props.name}</h3>
                 <p className="mb-2">{props.username}</p>

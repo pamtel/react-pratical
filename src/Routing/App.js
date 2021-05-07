@@ -32,6 +32,10 @@ function App() {
                     <h1 className="font-bold">404!! page NOT FOUND</h1>
                 </Route>
                 </Switch>
+
+
+
+                
             </div>
         </Router>
     )

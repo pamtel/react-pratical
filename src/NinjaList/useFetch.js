@@ -1,21 +1,33 @@
-import { useEffect } from "react";
-import {FETCH_SUCCESS} from './actions'
+import { useEffect,useCallback } from "react";
+import {FETCH_ALL_NINJAS, FETCH_SINGLE_NINJA} from './actions'
 
 
-function useFetch(url, dispatch) {
-    const fetchNinjas = async () => {
-        const response = await fetch(url)
-        const data = await response.json();
-        dispatch({type: FETCH_SUCCESS, payload: data})
+function useFetch(url, dispatch,dispatchType='All') {
+    let dispatchAction;
+    if(dispatchType === "single"){
+        dispatchAction =  FETCH_SINGLE_NINJA
+        dispatch({type: dispatchAction})
+    }else{
+        dispatchAction = FETCH_ALL_NINJAS
+        dispatch({type: dispatchAction})
     }
 
+
+    const fetchNinjas =  useCallback( () => {
+             fetch(url)
+           .then(response => response.json())
+            .then(response => {
+                dispatch({type: dispatchAction, payload:response})
+            })
+    },[dispatch,dispatchAction,url]
+) 
     useEffect(() => {
         try {
             fetchNinjas()
         }catch(err){
             console.log(err);
         }
-    }, [url, dispatch])
+    }, [fetchNinjas])
 }
 
 export default useFetch
