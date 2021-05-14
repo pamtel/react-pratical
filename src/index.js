@@ -29,7 +29,8 @@ import './index.css';
 // import App from './formValidation/App'
 // import App from './ReactModal/TestModal'
 // import App from "./Redux/App";
-import App from "./Redux_1/App";
+// import App from "./Redux_1/App";
+import App from "./ReduxBanking/AppBanking";
 
 
 ReactDOM.render(<App/>,
