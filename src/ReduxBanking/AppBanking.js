@@ -2,14 +2,14 @@ import React from 'react'
 import App from './App'
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { bankingReducer } from './reducers/bankingReducers'
+import { rootReducer } from './reducers/combineReducer'
 
-const store = createStore(bankingReducer)
+const store = createStore(rootReducer)
 
 function AppBanking() {
     return (
         <Provider store={store}>
-            <div>
+            <div className="w-full">
                 <App/>
             </div>
         </Provider>
