@@ -5,7 +5,7 @@ import './index.css';
 // import App from './components/lists/BirthdayApp';
 // import App from './App'
 // import App from './ContactApp'
-// import App from './GreetingApp'
+import App from './GreetingApp'
 // import App from './components/Testing'
 // import App from './components/useState/App'
 // import App from './components/conditional-rendering/Form'
@@ -30,7 +30,7 @@ import './index.css';
 // import App from './ReactModal/TestModal'
 // import App from "./Redux/App";
 // import App from "./Redux_1/App";
-import App from "./ReduxBanking/AppBanking";
+// import App from "./ReduxBanking/AppBanking";
 
 
 ReactDOM.render(<App/>,
